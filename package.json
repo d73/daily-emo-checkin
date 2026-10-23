@@ -1,0 +1,51 @@
+{
+  "name": "daily-emo-checkin",
+  "version": "1.0.0",
+  "description": "Daily emotional check-in web app (React PWA + Cloudflare Worker + D1)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -p tsconfig.app.json && tsc -p tsconfig.worker.json",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate:local": "wrangler d1 migrations apply daily-emo-checkin --local",
+    "db:migrate:remote": "wrangler d1 migrations apply daily-emo-checkin --remote",
+    "deploy": "vite build && wrangler deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d73/daily-emo-checkin.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/d73/daily-emo-checkin/issues"
+  },
+  "homepage": "https://github.com/d73/daily-emo-checkin#readme",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.1.0",
+    "better-auth": "^1.7.12",
+    "drizzle-orm": "^0.45.4",
+    "hono": "^4.13.13",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.64.0",
+    "@cloudflare/workers-types": "^5.20261023.1",
+    "@playwright/test": "^1.64.1",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "drizzle-kit": "^0.31.11",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vite-plugin-pwa": "^2.0.0",
+    "vitest": "^5.0.5",
+    "wrangler": "^4.152.0"
+  },
+  "private": true,
+  "type": "module"
+}
