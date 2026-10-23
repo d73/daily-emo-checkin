@@ -10,8 +10,8 @@
     "test": "vitest run",
     "test:e2e": "playwright test",
     "db:generate": "drizzle-kit generate",
-    "db:migrate:local": "wrangler d1 migrations apply daily-emo-checkin --local",
-    "db:migrate:remote": "wrangler d1 migrations apply daily-emo-checkin --remote",
+    "db:migrate:local": "wrangler d1 migrations apply DB --local",
+    "db:migrate:remote": "wrangler d1 migrations apply DB --remote",
     "deploy": "vite build && wrangler deploy"
   },
   "repository": {
