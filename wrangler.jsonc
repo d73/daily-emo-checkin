@@ -15,9 +15,8 @@
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "daily-emo-checkin",
-      // Replace with the id printed by: npx wrangler d1 create daily-emo-checkin
-      "database_id": "00000000-0000-0000-0000-000000000000",
+      "database_name": "d1-daily-emo-checkin",
+      "database_id": "2f6c2689-a7b5-4202-b3ea-f176da54abd4",
       "migrations_dir": "migrations"
     }
   ],

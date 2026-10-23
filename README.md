@@ -40,8 +40,7 @@ npm run typecheck
 
 ```sh
 npx wrangler login
-npx wrangler d1 create daily-emo-checkin      # copy the database_id into wrangler.jsonc
-npm run db:migrate:remote
+npm run db:migrate:remote                     # database d1-daily-emo-checkin already exists; id is in wrangler.jsonc
 npx wrangler secret put BETTER_AUTH_SECRET     # any random string, 32+ characters
 npx wrangler secret put BETTER_AUTH_URL        # e.g. https://daily-emo-checkin.<you>.workers.dev
 npx wrangler secret put ANTHROPIC_API_KEY      # from console.anthropic.com
