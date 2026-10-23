@@ -48,13 +48,8 @@ npx wrangler secret put ANTHROPIC_API_KEY      # from console.anthropic.com
 npm run deploy
 ```
 
-Always deploy with `npm run deploy`: it builds the app first, then uploads it.
-Running `npx wrangler deploy` on its own skips the build and fails with
-"The directory specified by the assets.directory field ... does not exist".
-
-If you deploy from GitHub with Cloudflare's Git integration (Workers Builds), set:
-- Build command: `npm run build`
-- Deploy command: `npx wrangler deploy`
+`npm run deploy` and plain `npx wrangler deploy` both work: `wrangler.jsonc` runs
+`npm run build` before every deploy. Cloudflare's GitHub builds need no build command.
 
 Set a monthly spending limit in the Anthropic console before sharing the app with anyone.
 
